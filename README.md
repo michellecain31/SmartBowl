@@ -49,4 +49,9 @@ python create_db.py
 ```
 python PetFeederGui.py
 ```
+## 👩‍💻 Developed by
+
+- [Shir Berko](https://github.com/ShirBerko)  
+- [Michelle Cain](https://github.com/michellecain31)  
+- [Tal Itzhak](https://github.com/TalItzhak3)
 
