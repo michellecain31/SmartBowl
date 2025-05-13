@@ -1,42 +1,51 @@
-# 🐶 SmartBowl – Smart Pet Feeder
+# 🐶 SmartBowl – IoT-Based Smart Pet Feeder
 
-**SmartBowl** is an IoT-based smart feeding system for pets that combines automation, sensors, and user interfaces to ensure pets are fed on time, every time.
+SmartBowl is a smart pet feeding system built using Python and IoT technologies. It ensures pets are fed regularly and intelligently, combining automation, sensors, and a clean user interface.
 
-## 📌 Features
+> 🎯 Designed for pet owners who want to automate feeding while tracking their pets’ habits.
 
-- 🕹️ **Manual feeding** via button press  
-- ⏰ **Scheduled automatic feeding** (set times for morning, noon, and evening)  
-- 🧠 **Adaptive feeding** – learns eating habits and adjusts quantity accordingly  
-- 🎙️ **Sound-based feeding trigger** – detects barking when bowl is empty and fills it  
-- 📊 **GUI dashboard** showing last feeding time and settings  
-- 🧪 **Bowl fullness sensor** to avoid overfeeding  
+## ✨ Features
 
-## 🧰 Technologies Used
+| Feature | Description |
+|--------|-------------|
+| 🕹️ Manual Feeding | Feed your pet instantly via a GUI button |
+| ⏰ Scheduled Feeding | Set feeding times for morning, noon, and evening |
+| 🧠 Adaptive Feeding | Learns your pet’s eating habits and adjusts portion size |
+| 🎙️ Bark Detection | Auto-feeds when barking is detected and bowl is under 50% full |
+| 📊 GUI Dashboard | Displays real-time feeding status and last meal |
+| 🧪 Fullness Sensor | Prevents overfeeding with a bowl-level detector |
+| 📁 Data Logging | Stores feeding history in a local SQLite database |
 
-- `Python 3`
-- `PyQt5` for GUI
-- `MQTT` protocol (`paho-mqtt`)
-- SQLite database (`pet_feeder.db`)
-- Simple image/audio files for user interaction
+## 🧰 Tech Stack
 
-## 🗂️ Main Files
+- 🐍 Python 3
+- 🖥️ PyQt5 (GUI)
+- ☁️ MQTT Protocol (`paho-mqtt`)
+- 🗃️ SQLite3 (Local DB)
+- 🎧 Audio/image resources
 
-| File                     | Description                                    |
-|--------------------------|------------------------------------------------|
-| `PetFeederGui.py`        | Main graphical interface                      |
-| `FeedingSchedulerGui.py` | Schedule feeding times                        |
-| `ManualFeedButton.py`    | Manual feed button interface                  |
-| `autoFeeder.py`          | Handles automated feeding logic               |
-| `FeederRelay.py`         | Controls the physical relay for feeding       |
-| `BowlFullSensor.py`      | Simulates bowl fullness sensor                |
-| `PetFeederDataManager.py`| Manages feeding history and stats             |
-| `create_db.py`           | Initializes SQLite database                   |
-| `mqtt_init.py`           | MQTT setup and configuration                  |
-| `view_schedule.py`       | View and manage existing feed schedule        |
+## 🗂️ Project Structure
+
+| File | Purpose |
+|------|---------|
+| `PetFeederGui.py` | Main graphical interface |
+| `FeedingSchedulerGui.py` | Feeding time scheduler |
+| `ManualFeedButton.py` | Manual feeding interface |
+| `autoFeeder.py` | Handles automated feeding logic |
+| `FeederRelay.py` | Controls the relay triggering the feeder |
+| `BowlFullSensor.py` | Simulates detection of full bowl |
+| `PetFeederDataManager.py` | Manages feeding data and logs |
+| `create_db.py` | Initializes the SQLite database |
+| `mqtt_init.py` | MQTT client configuration |
+| `view_schedule.py` | GUI to review and edit feed schedules |
+
+
 
 ## ▶️ How to Run
 
-1. Make sure you have Python 3 installed.
+1. Prerequisites:
+- Python 3.x installed on your system  
+- MQTT broker (like HiveMQ or Mosquitto, optional for local tests)
 2. Install requirements:
 ```
 pip install PyQt5 paho-mqtt
